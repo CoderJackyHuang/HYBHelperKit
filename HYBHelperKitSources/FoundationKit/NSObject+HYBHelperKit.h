@@ -51,11 +51,15 @@
 
 #pragma mark - Filter Null and nil
 /**
- *	Filter
- *
- *	@return <#return value description#>
+ *	Filter all nil and null object.
  */
 - (id)hyb_filterNullNil;
+
+/**
+ *	Filter all nil and null object.
+ *
+ *	@param object	The object to be filtered.
+ */
 + (id)hyb_filterNullNilFromObject:(id)object;
 
 @end

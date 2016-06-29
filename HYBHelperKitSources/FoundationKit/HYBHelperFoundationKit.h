@@ -13,5 +13,7 @@
 #include "NSString+HYBHelperKit.h"
 #include "NSUserDefaults+HYBHelperKit.h"
 #include "NSTimer+HYBHelperKit.h"
+#include "NSMutableArray+HYBHelperKit.h"
+#include "NSArray+HYBHelperKit.h"
 
 #endif /* HYBHelperFoundationKit_h */
