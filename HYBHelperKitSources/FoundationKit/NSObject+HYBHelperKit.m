@@ -60,7 +60,7 @@
   } else if ([object isKindOfClass:[NSArray class]]) {
     return [self _removeNullFromArray:(NSArray *)object];
   } else if ([object isKindOfClass:[NSSet class]]) {
-    return nil;
+    return [self _removeNullFromSet:(NSSet *)object];
   } else if ([object isKindOfClass:[NSNull class]] || object == nil) {
     return nil;
   }
@@ -93,7 +93,11 @@
         [resultDict setObject:object forKey:key];
       }
     } else if ([object isKindOfClass:[NSSet class]]) {
+      object = [self _removeNullFromSet:(NSSet *)object];
       
+      if (object != nil && ![object isKindOfClass:[NSNull class]]) {
+        [resultDict setObject:object forKey:key];
+      }
     } else {
       [resultDict setObject:object forKey:key];
     }
@@ -131,13 +135,59 @@
         [resultArray addObject:object];
       }
     } else if ([object isKindOfClass:[NSSet class]]) {
+      object = [self _removeNullFromSet:(NSSet *)object];
       
+      if (object != nil && ![object isKindOfClass:[NSNull class]]) {
+        [resultArray addObject:object];
+      }
     } else {
       [resultArray addObject:object];
     }
   }
   
   return resultArray;
+}
+
++ (NSSet *)_removeNullFromSet:(NSSet *)set {
+  if (set == nil || [set isKindOfClass:[NSNull class]]) {
+    return nil;
+  }
+  
+  if (set.count == 0) {
+    return set;
+  }
+  
+  NSMutableSet *resultSet = [[NSMutableSet alloc] initWithCapacity:set.count];
+
+  [set enumerateObjectsUsingBlock:^(id  _Nonnull obj, BOOL * _Nonnull stop) {
+    id object = obj;
+    
+    if ([object isKindOfClass:[NSNull class]] || object == nil) {
+      // 不添加
+    } else if ([object isKindOfClass:[NSDictionary class]]) {
+      object = [self _removeNullNilFromDict:(NSDictionary *)object];
+      
+      if (object != nil && ![object isKindOfClass:[NSNull class]]) {
+        [resultSet addObject:object];
+      }
+    } else if ([object isKindOfClass:[NSArray class]]) {
+      object = [self _removeNullFromArray:(NSArray *)object];
+      
+      if (object != nil && ![object isKindOfClass:[NSNull class]]) {
+        [resultSet addObject:object];
+      }
+    } else if ([object isKindOfClass:[NSSet class]]) {
+      object = [self _removeNullFromSet:(NSSet *)object];
+      
+      if (object != nil && ![object isKindOfClass:[NSNull class]]) {
+        [resultSet addObject:object];
+      }
+    } else {
+      [resultSet addObject:object];
+    }
+  }];
+  
+  return resultSet;
 }
 
 @end

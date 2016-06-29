@@ -26,10 +26,8 @@
 }
 
 - (void)testNullNilObject {
-  NSSet *set = [NSSet setWithObjects:@"null", @"sdf", nil];
   NSDictionary *dict = @{@"key1" : [NSNull null],
-                         @"key2" : @[@"s", @"df", @"null"],
-                         @"key3" : set};
+                         @"key2" : @[@"s", @"df", @"null"]};
   BOOL ok = [[NSUserDefaults standardUserDefaults] hyb_setSafeObject:dict forKey:@"s"];
   XCTAssert(ok);
   
