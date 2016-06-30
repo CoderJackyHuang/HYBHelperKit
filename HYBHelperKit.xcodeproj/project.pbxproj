@@ -7,11 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5EE55DF079058957C1D7C04F /* libPods-HYBHelperKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B9F4AC97535142014D9B17F /* libPods-HYBHelperKit.a */; };
 		6932F8CC1D241B6300F2D2F0 /* NSDictionary+HYBHelperKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6932F8CB1D241B6300F2D2F0 /* NSDictionary+HYBHelperKit.m */; };
 		6932F8CF1D241B7500F2D2F0 /* NSMutableDictionary+HYBHelperKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6932F8CE1D241B7500F2D2F0 /* NSMutableDictionary+HYBHelperKit.m */; };
 		6932F8D11D24D12600F2D2F0 /* DictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6932F8D01D24D12600F2D2F0 /* DictionaryTests.m */; };
 		6932F8D41D24DBD000F2D2F0 /* NSFileManager+HYBHelperKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6932F8D31D24DBD000F2D2F0 /* NSFileManager+HYBHelperKit.m */; };
 		6932F8D51D24DBD000F2D2F0 /* NSFileManager+HYBHelperKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6932F8D31D24DBD000F2D2F0 /* NSFileManager+HYBHelperKit.m */; };
+		6932F8D81D24F3E200F2D2F0 /* HYBHelperKitBaseURLController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6932F8D71D24F3E200F2D2F0 /* HYBHelperKitBaseURLController.m */; };
+		6932F8D91D24F3E200F2D2F0 /* HYBHelperKitBaseURLController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6932F8D71D24F3E200F2D2F0 /* HYBHelperKitBaseURLController.m */; };
+		6932F8DC1D24F8E000F2D2F0 /* UIView+HYBHelperKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6932F8DB1D24F8E000F2D2F0 /* UIView+HYBHelperKit.m */; };
+		6932F8DD1D24F8E000F2D2F0 /* UIView+HYBHelperKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6932F8DB1D24F8E000F2D2F0 /* UIView+HYBHelperKit.m */; };
+		6932F8E11D24FA0900F2D2F0 /* UIView+HYBHelperKitUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6932F8E01D24FA0900F2D2F0 /* UIView+HYBHelperKitUIKit.m */; };
+		6932F8E21D24FA0900F2D2F0 /* UIView+HYBHelperKitUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6932F8E01D24FA0900F2D2F0 /* UIView+HYBHelperKitUIKit.m */; };
 		69489E851D23790E00F90205 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 69489E841D23790E00F90205 /* main.m */; };
 		69489E881D23790E00F90205 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 69489E871D23790E00F90205 /* AppDelegate.m */; };
 		69489E8B1D23790E00F90205 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69489E8A1D23790E00F90205 /* ViewController.m */; };
@@ -30,6 +37,7 @@
 		69C383231D23D5DC00176B00 /* NSArray+HYBHelperKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C383221D23D5DC00176B00 /* NSArray+HYBHelperKit.m */; };
 		69C383261D23D79A00176B00 /* NSMutableArray+HYBHelperKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C383251D23D79A00176B00 /* NSMutableArray+HYBHelperKit.m */; };
 		69C383291D23DA4100176B00 /* ArrayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C383271D23DA4100176B00 /* ArrayTests.m */; };
+		DC82BC5B03DBD5DC59B883D8 /* libPods-HYBHelperKitTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 880E538D3E79C9676BE1490E /* libPods-HYBHelperKitTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +51,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27E98AAFD6B6C8A744E7B36C /* Pods-HYBHelperKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HYBHelperKitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HYBHelperKitTests/Pods-HYBHelperKitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2B9F4AC97535142014D9B17F /* libPods-HYBHelperKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HYBHelperKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D2427DF68D165E6D41371A3 /* Pods-HYBHelperKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HYBHelperKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-HYBHelperKit/Pods-HYBHelperKit.release.xcconfig"; sourceTree = "<group>"; };
+		3E988714FC5DCCC6FE572EC4 /* Pods-HYBHelperKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HYBHelperKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HYBHelperKit/Pods-HYBHelperKit.debug.xcconfig"; sourceTree = "<group>"; };
 		6932F8CA1D241B6300F2D2F0 /* NSDictionary+HYBHelperKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+HYBHelperKit.h"; sourceTree = "<group>"; };
 		6932F8CB1D241B6300F2D2F0 /* NSDictionary+HYBHelperKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+HYBHelperKit.m"; sourceTree = "<group>"; };
 		6932F8CD1D241B7500F2D2F0 /* NSMutableDictionary+HYBHelperKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+HYBHelperKit.h"; sourceTree = "<group>"; };
@@ -50,6 +62,12 @@
 		6932F8D01D24D12600F2D2F0 /* DictionaryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictionaryTests.m; sourceTree = "<group>"; };
 		6932F8D21D24DBD000F2D2F0 /* NSFileManager+HYBHelperKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+HYBHelperKit.h"; sourceTree = "<group>"; };
 		6932F8D31D24DBD000F2D2F0 /* NSFileManager+HYBHelperKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+HYBHelperKit.m"; sourceTree = "<group>"; };
+		6932F8D61D24F3E200F2D2F0 /* HYBHelperKitBaseURLController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBHelperKitBaseURLController.h; sourceTree = "<group>"; };
+		6932F8D71D24F3E200F2D2F0 /* HYBHelperKitBaseURLController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYBHelperKitBaseURLController.m; sourceTree = "<group>"; };
+		6932F8DA1D24F8E000F2D2F0 /* UIView+HYBHelperKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HYBHelperKit.h"; sourceTree = "<group>"; };
+		6932F8DB1D24F8E000F2D2F0 /* UIView+HYBHelperKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HYBHelperKit.m"; sourceTree = "<group>"; };
+		6932F8DF1D24FA0900F2D2F0 /* UIView+HYBHelperKitUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HYBHelperKitUIKit.h"; sourceTree = "<group>"; };
+		6932F8E01D24FA0900F2D2F0 /* UIView+HYBHelperKitUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HYBHelperKitUIKit.m"; sourceTree = "<group>"; };
 		69489E801D23790E00F90205 /* HYBHelperKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HYBHelperKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69489E841D23790E00F90205 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		69489E861D23790E00F90205 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -91,6 +109,8 @@
 		69C383241D23D79A00176B00 /* NSMutableArray+HYBHelperKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+HYBHelperKit.h"; sourceTree = "<group>"; };
 		69C383251D23D79A00176B00 /* NSMutableArray+HYBHelperKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+HYBHelperKit.m"; sourceTree = "<group>"; };
 		69C383271D23DA4100176B00 /* ArrayTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayTests.m; sourceTree = "<group>"; };
+		880E538D3E79C9676BE1490E /* libPods-HYBHelperKitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HYBHelperKitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4190D82170077172A8B3795 /* Pods-HYBHelperKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HYBHelperKitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HYBHelperKitTests/Pods-HYBHelperKitTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EE55DF079058957C1D7C04F /* libPods-HYBHelperKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,18 +126,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC82BC5B03DBD5DC59B883D8 /* libPods-HYBHelperKitTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6932F8DE1D24F9F100F2D2F0 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				6932F8DF1D24FA0900F2D2F0 /* UIView+HYBHelperKitUIKit.h */,
+				6932F8E01D24FA0900F2D2F0 /* UIView+HYBHelperKitUIKit.m */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
 		69489E771D23790E00F90205 = {
 			isa = PBXGroup;
 			children = (
 				69489E821D23790E00F90205 /* HYBHelperKit */,
 				69489E9C1D23790E00F90205 /* HYBHelperKitTests */,
 				69489E811D23790E00F90205 /* Products */,
+				A0654A6FA263E139658F66F9 /* Pods */,
+				EABF94265F022B8CD7ECFEC0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -167,6 +200,7 @@
 		69489EA91D2379B100F90205 /* HYBHelperKitSources */ = {
 			isa = PBXGroup;
 			children = (
+				6932F8DE1D24F9F100F2D2F0 /* UIKit */,
 				69C3831B1D23CAAE00176B00 /* CommonKit */,
 				69489EAF1D237A8400F90205 /* HYBHelperKit.h */,
 				69489EAA1D2379B100F90205 /* Constants */,
@@ -190,6 +224,8 @@
 			isa = PBXGroup;
 			children = (
 				69489EB11D237B1600F90205 /* HYBHelperControllers.h */,
+				6932F8D61D24F3E200F2D2F0 /* HYBHelperKitBaseURLController.h */,
+				6932F8D71D24F3E200F2D2F0 /* HYBHelperKitBaseURLController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -232,6 +268,8 @@
 			isa = PBXGroup;
 			children = (
 				69489EB41D237B5300F90205 /* HYBHelperMasonryMaker.h */,
+				6932F8DA1D24F8E000F2D2F0 /* UIView+HYBHelperKit.h */,
+				6932F8DB1D24F8E000F2D2F0 /* UIView+HYBHelperKit.m */,
 			);
 			path = UIMasonryMaker;
 			sourceTree = "<group>";
@@ -261,6 +299,26 @@
 			path = CommonKit;
 			sourceTree = "<group>";
 		};
+		A0654A6FA263E139658F66F9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3E988714FC5DCCC6FE572EC4 /* Pods-HYBHelperKit.debug.xcconfig */,
+				3D2427DF68D165E6D41371A3 /* Pods-HYBHelperKit.release.xcconfig */,
+				27E98AAFD6B6C8A744E7B36C /* Pods-HYBHelperKitTests.debug.xcconfig */,
+				D4190D82170077172A8B3795 /* Pods-HYBHelperKitTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EABF94265F022B8CD7ECFEC0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B9F4AC97535142014D9B17F /* libPods-HYBHelperKit.a */,
+				880E538D3E79C9676BE1490E /* libPods-HYBHelperKitTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -268,9 +326,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 69489EA21D23790E00F90205 /* Build configuration list for PBXNativeTarget "HYBHelperKit" */;
 			buildPhases = (
+				44B2C4371B8E5D8CEAC74A1D /* 📦 Check Pods Manifest.lock */,
 				69489E7C1D23790E00F90205 /* Sources */,
 				69489E7D1D23790E00F90205 /* Frameworks */,
 				69489E7E1D23790E00F90205 /* Resources */,
+				1EFDCD21E8E8ECA0267B1586 /* 📦 Embed Pods Frameworks */,
+				81534C734CCEF3F4035504D7 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -285,9 +346,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 69489EA51D23790E00F90205 /* Build configuration list for PBXNativeTarget "HYBHelperKitTests" */;
 			buildPhases = (
+				D6C81BFCA53864F8884FFE81 /* 📦 Check Pods Manifest.lock */,
 				69489E951D23790E00F90205 /* Sources */,
 				69489E961D23790E00F90205 /* Frameworks */,
 				69489E971D23790E00F90205 /* Resources */,
+				6B8615C290B3105DB77F07FD /* 📦 Embed Pods Frameworks */,
+				2A2189E2041806595439F32F /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -356,6 +420,99 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1EFDCD21E8E8ECA0267B1586 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HYBHelperKit/Pods-HYBHelperKit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2A2189E2041806595439F32F /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HYBHelperKitTests/Pods-HYBHelperKitTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		44B2C4371B8E5D8CEAC74A1D /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6B8615C290B3105DB77F07FD /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HYBHelperKitTests/Pods-HYBHelperKitTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81534C734CCEF3F4035504D7 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HYBHelperKit/Pods-HYBHelperKit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6C81BFCA53864F8884FFE81 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		69489E7C1D23790E00F90205 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -366,11 +523,14 @@
 				69489E8B1D23790E00F90205 /* ViewController.m in Sources */,
 				6932F8CC1D241B6300F2D2F0 /* NSDictionary+HYBHelperKit.m in Sources */,
 				69489EC01D23B5A700F90205 /* NSTimer+HYBHelperKit.m in Sources */,
+				6932F8E11D24FA0900F2D2F0 /* UIView+HYBHelperKitUIKit.m in Sources */,
 				6932F8D41D24DBD000F2D2F0 /* NSFileManager+HYBHelperKit.m in Sources */,
 				69489E881D23790E00F90205 /* AppDelegate.m in Sources */,
 				6932F8CF1D241B7500F2D2F0 /* NSMutableDictionary+HYBHelperKit.m in Sources */,
 				69489E851D23790E00F90205 /* main.m in Sources */,
+				6932F8DC1D24F8E000F2D2F0 /* UIView+HYBHelperKit.m in Sources */,
 				69489EBD1D23B14D00F90205 /* NSUserDefaults+HYBHelperKit.m in Sources */,
+				6932F8D81D24F3E200F2D2F0 /* HYBHelperKitBaseURLController.m in Sources */,
 				69489EBA1D23A25F00F90205 /* NSString+HYBHelperKit.m in Sources */,
 				69C383231D23D5DC00176B00 /* NSArray+HYBHelperKit.m in Sources */,
 			);
@@ -385,9 +545,12 @@
 				69489ED11D23C11200F90205 /* NSStringTests.m in Sources */,
 				69489ECC1D23BEEF00F90205 /* NSUserDefaultsTests.m in Sources */,
 				69C383191D23C7FB00176B00 /* NSObjectTests.m in Sources */,
+				6932F8D91D24F3E200F2D2F0 /* HYBHelperKitBaseURLController.m in Sources */,
 				6932F8D11D24D12600F2D2F0 /* DictionaryTests.m in Sources */,
 				69489E9E1D23790E00F90205 /* HYBHelperKitTests.m in Sources */,
 				69C383291D23DA4100176B00 /* ArrayTests.m in Sources */,
+				6932F8DD1D24F8E000F2D2F0 /* UIView+HYBHelperKit.m in Sources */,
+				6932F8E21D24FA0900F2D2F0 /* UIView+HYBHelperKitUIKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +668,7 @@
 		};
 		69489EA31D23790E00F90205 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E988714FC5DCCC6FE572EC4 /* Pods-HYBHelperKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HYBHelperKit/Info.plist;
@@ -517,6 +681,7 @@
 		};
 		69489EA41D23790E00F90205 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D2427DF68D165E6D41371A3 /* Pods-HYBHelperKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HYBHelperKit/Info.plist;
@@ -529,6 +694,7 @@
 		};
 		69489EA61D23790E00F90205 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27E98AAFD6B6C8A744E7B36C /* Pods-HYBHelperKitTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = HYBHelperKitTests/Info.plist;
@@ -541,6 +707,7 @@
 		};
 		69489EA71D23790E00F90205 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4190D82170077172A8B3795 /* Pods-HYBHelperKitTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = HYBHelperKitTests/Info.plist;

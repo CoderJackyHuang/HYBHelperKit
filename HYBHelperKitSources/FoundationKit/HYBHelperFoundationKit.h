@@ -17,5 +17,6 @@
 #include "NSArray+HYBHelperKit.h"
 #include "NSDictionary+HYBHelperKit.h"
 #include "NSMutableDictionary+HYBHelperKit.h"
+#include "NSFileManager+HYBHelperKit.h"
 
 #endif /* HYBHelperFoundationKit_h */

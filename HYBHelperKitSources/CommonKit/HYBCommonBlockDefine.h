@@ -22,6 +22,11 @@ typedef void (^HYBErrorBlock)(NSError *error);
 typedef void (^HYBVoidBlock)(void);
 
 /**
+ *	This is a common block for handling to return a string value.
+ */
+typedef void (^HYBStringBlock)(NSString *result);
+
+/**
  * For notification block.
  */
 typedef void (^HYBNotificationBlock)(NSNotification *sender);
