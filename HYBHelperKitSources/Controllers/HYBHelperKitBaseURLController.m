@@ -7,10 +7,15 @@
 //
 
 #import "HYBHelperKitBaseURLController.h"
+#import "UITableView+HYBMasonryKit.h"
+#import "HYBHelperFoundationKit.h"
 
-@interface HYBHelperKitBaseURLController ()
+static NSString *kCellIdentifier = @"HYBBaseURLCellIdentifier";
+
+@interface HYBHelperKitBaseURLController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) UITextField *textField;
 
 @property (nonatomic, copy) NSArray *baseURLs;
 @property (nonatomic, copy) HYBStringBlock callback;
@@ -19,7 +24,7 @@
 
 @implementation HYBHelperKitBaseURLController
 
-+ (instancetype)showWithBaseURLs:(NSArray *(^)(void))baseURLSources
++ (instancetype)createWithBaseURLs:(NSArray *(^)(void))baseURLSources
                       onCallback:(HYBStringBlock)callback {
 #ifdef DEBUG
   HYBHelperKitBaseURLController *vc = [[HYBHelperKitBaseURLController alloc] init];
@@ -47,7 +52,33 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   
+  self.tableView = [UITableView hyb_tableViewWithSuperview:self.view delegate:self];
+  [self.tableView registerClass:[UITableViewCell class]
+         forCellReuseIdentifier:kCellIdentifier];
   
+  
+}
+
+#pragma mark - UITableViewDelegate & UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+  return self.baseURLs.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier];
+  
+  NSString *baseUrl = [self.baseURLs hyb_objectAtIndex:indexPath.row];
+  cell.detailTextLabel.text = baseUrl;
+  
+  return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+  NSString *baseUrl = [self.baseURLs hyb_objectAtIndex:indexPath.row];
+  
+  if (self.callback) {
+    self.callback(baseUrl);
+  }
 }
 
 @end

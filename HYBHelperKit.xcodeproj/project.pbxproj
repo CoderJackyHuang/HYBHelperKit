@@ -22,6 +22,8 @@
 		6932F8EB1D250DB500F2D2F0 /* UIDevice+HYBHelperKitUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6932F8EA1D250DB500F2D2F0 /* UIDevice+HYBHelperKitUIKit.m */; };
 		6932F8EE1D250E6F00F2D2F0 /* UIColor+HYBHelperKitUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6932F8ED1D250E6F00F2D2F0 /* UIColor+HYBHelperKitUIKit.m */; };
 		6932F8F41D25122200F2D2F0 /* UIGestureRecognizer+HYBHelperBlockKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6932F8F31D25122200F2D2F0 /* UIGestureRecognizer+HYBHelperBlockKit.m */; };
+		6932F90A1D251D3300F2D2F0 /* UITableView+HYBMasonryKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6932F9091D251D3300F2D2F0 /* UITableView+HYBMasonryKit.m */; };
+		6932F90D1D25239400F2D2F0 /* UITextField+HYBMasonryKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6932F90C1D25239400F2D2F0 /* UITextField+HYBMasonryKit.m */; };
 		69489E851D23790E00F90205 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 69489E841D23790E00F90205 /* main.m */; };
 		69489E881D23790E00F90205 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 69489E871D23790E00F90205 /* AppDelegate.m */; };
 		69489E8B1D23790E00F90205 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69489E8A1D23790E00F90205 /* ViewController.m */; };
@@ -79,6 +81,12 @@
 		6932F8ED1D250E6F00F2D2F0 /* UIColor+HYBHelperKitUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HYBHelperKitUIKit.m"; sourceTree = "<group>"; };
 		6932F8F21D25122200F2D2F0 /* UIGestureRecognizer+HYBHelperBlockKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+HYBHelperBlockKit.h"; sourceTree = "<group>"; };
 		6932F8F31D25122200F2D2F0 /* UIGestureRecognizer+HYBHelperBlockKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+HYBHelperBlockKit.m"; sourceTree = "<group>"; };
+		6932F9061D251CDD00F2D2F0 /* HYBHelperUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBHelperUIKit.h; sourceTree = "<group>"; };
+		6932F9071D251D0900F2D2F0 /* HYBHelperMasonryMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBHelperMasonryMaker.h; sourceTree = "<group>"; };
+		6932F9081D251D3300F2D2F0 /* UITableView+HYBMasonryKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+HYBMasonryKit.h"; sourceTree = "<group>"; };
+		6932F9091D251D3300F2D2F0 /* UITableView+HYBMasonryKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+HYBMasonryKit.m"; sourceTree = "<group>"; };
+		6932F90B1D25239400F2D2F0 /* UITextField+HYBMasonryKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+HYBMasonryKit.h"; sourceTree = "<group>"; };
+		6932F90C1D25239400F2D2F0 /* UITextField+HYBMasonryKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+HYBMasonryKit.m"; sourceTree = "<group>"; };
 		69489E801D23790E00F90205 /* HYBHelperKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HYBHelperKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69489E841D23790E00F90205 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		69489E861D23790E00F90205 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -152,8 +160,21 @@
 				6932F8EA1D250DB500F2D2F0 /* UIDevice+HYBHelperKitUIKit.m */,
 				6932F8EC1D250E6F00F2D2F0 /* UIColor+HYBHelperKitUIKit.h */,
 				6932F8ED1D250E6F00F2D2F0 /* UIColor+HYBHelperKitUIKit.m */,
+				6932F9061D251CDD00F2D2F0 /* HYBHelperUIKit.h */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		6932F9051D251CCB00F2D2F0 /* UIMasonryKit */ = {
+			isa = PBXGroup;
+			children = (
+				6932F9071D251D0900F2D2F0 /* HYBHelperMasonryMaker.h */,
+				6932F9081D251D3300F2D2F0 /* UITableView+HYBMasonryKit.h */,
+				6932F9091D251D3300F2D2F0 /* UITableView+HYBMasonryKit.m */,
+				6932F90B1D25239400F2D2F0 /* UITextField+HYBMasonryKit.h */,
+				6932F90C1D25239400F2D2F0 /* UITextField+HYBMasonryKit.m */,
+			);
+			path = UIMasonryKit;
 			sourceTree = "<group>";
 		};
 		69489E771D23790E00F90205 = {
@@ -214,6 +235,7 @@
 		69489EA91D2379B100F90205 /* HYBHelperKitSources */ = {
 			isa = PBXGroup;
 			children = (
+				6932F9051D251CCB00F2D2F0 /* UIMasonryKit */,
 				6932F8DE1D24F9F100F2D2F0 /* UIKit */,
 				69C3831B1D23CAAE00176B00 /* CommonKit */,
 				69489EAF1D237A8400F90205 /* HYBHelperKit.h */,
@@ -533,7 +555,9 @@
 				69489E8B1D23790E00F90205 /* ViewController.m in Sources */,
 				6932F8CC1D241B6300F2D2F0 /* NSDictionary+HYBHelperKit.m in Sources */,
 				69489EC01D23B5A700F90205 /* NSTimer+HYBHelperKit.m in Sources */,
+				6932F90A1D251D3300F2D2F0 /* UITableView+HYBMasonryKit.m in Sources */,
 				6932F8E11D24FA0900F2D2F0 /* UIView+HYBHelperKitUIKit.m in Sources */,
+				6932F90D1D25239400F2D2F0 /* UITextField+HYBMasonryKit.m in Sources */,
 				6932F8D41D24DBD000F2D2F0 /* NSFileManager+HYBHelperKit.m in Sources */,
 				6932F8E81D25080D00F2D2F0 /* UIControl+HYBHelperBlockKit.m in Sources */,
 				6932F8EB1D250DB500F2D2F0 /* UIDevice+HYBHelperKitUIKit.m in Sources */,

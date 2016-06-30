@@ -30,7 +30,7 @@
  *
  *	@return The controller instance.
  */
-+ (instancetype)showWithBaseURLs:(NSArray *(^)(void))baseURLSources
++ (instancetype)createWithBaseURLs:(NSArray *(^)(void))baseURLSources
                       onCallback:(HYBStringBlock)callback;
 
 @end

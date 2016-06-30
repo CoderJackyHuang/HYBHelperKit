@@ -18,5 +18,6 @@
 #include "HYBHelperBlocksKit.h"
 #include "HYBHelperMasonryMaker.h"
 #include "HYBHelperCommonKit.h"
+#include "HYBHelperUIKit.h"
 
 #endif /* HYBHelperKit_h */
