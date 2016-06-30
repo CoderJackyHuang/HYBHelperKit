@@ -77,6 +77,24 @@ typedef void (^HYBIdBlock)(id result);
 typedef void(^HYBButtonBlock)(UIButton *sender);
 
 /**
+ *	@author https://github.com/CoderJackyHuang
+ *
+ *	Common value change block.
+ *
+ *	@param sender	The responder
+ */
+typedef void(^HYBValueChangedBlock)(id sender);
+
+/**
+ *	@author https://github.com/CoderJackyHuang
+ *
+ *	Common edit change block, eg: UITextField.
+ *
+ *	@param sender	The responder.
+ */
+typedef void(^HYBEditChangedBlock)(id sender);
+
+/**
  * For button array block.
  *
  * @param index  index in the array.
@@ -88,5 +106,23 @@ typedef void(^HYBButtonIndexBlock)(NSUInteger index, UIButton *sender);
  * Gesture block callback.
  */
 typedef void(^HYBGestureBlock)(UIGestureRecognizer *sender);
+
+/**
+ *	@author https://github.com/CoderJackyHuang
+ *
+ *	The long press gesture callback block.
+ *
+ *	@param sender	The long press gesture.
+ */
+typedef void(^HYBLongGestureBlock)(UILongPressGestureRecognizer *sender);
+
+/**
+ *	@author https://github.com/CoderJackyHuang
+ *
+ *	The tap gesture callback block.
+ *
+ *	@param sender	The tap gesture.
+ */
+typedef void(^HYBTapGestureBlock)(UITapGestureRecognizer *sender);
 
 #endif /* HYBCommonBlockDefine_h */
