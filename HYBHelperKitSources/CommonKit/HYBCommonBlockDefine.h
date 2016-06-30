@@ -9,6 +9,8 @@
 #ifndef HYBCommonBlockDefine_h
 #define HYBCommonBlockDefine_h
 
+#import <UIKit/UIKit.h>
+
 /**
  *	This is a common block for handling error.
  */

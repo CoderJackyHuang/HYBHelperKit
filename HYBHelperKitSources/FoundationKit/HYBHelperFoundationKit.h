@@ -15,5 +15,7 @@
 #include "NSTimer+HYBHelperKit.h"
 #include "NSMutableArray+HYBHelperKit.h"
 #include "NSArray+HYBHelperKit.h"
+#include "NSDictionary+HYBHelperKit.h"
+#include "NSMutableDictionary+HYBHelperKit.h"
 
 #endif /* HYBHelperFoundationKit_h */
