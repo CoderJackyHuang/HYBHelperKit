@@ -12,12 +12,12 @@
 /**
  *	使用此库的入口，可以通过引入此文件，达到统一引入全部文件的上的
  */
-#include "HYBHelperConstants.h"
-#include "HYBHelperControllers.h"
-#include "HYBHelperFoundationKit.h"
-#include "HYBHelperBlocksKit.h"
-#include "HYBHelperMasonryMaker.h"
-#include "HYBHelperCommonKit.h"
-#include "HYBHelperUIKit.h"
+#import "HYBHelperConstants.h"
+#import "HYBHelperControllers.h"
+#import "HYBHelperFoundationKit.h"
+#import "HYBHelperBlocksKit.h"
+#import "HYBHelperMasonryMaker.h"
+#import "HYBHelperCommonKit.h"
+#import "HYBHelperUIKit.h"
 
 #endif /* HYBHelperKit_h */
