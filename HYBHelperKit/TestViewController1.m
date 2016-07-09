@@ -19,12 +19,14 @@
 //  }];
 //  [self.hyb_rightButtonItem setTitleColor:kBlueColor forState:UIControlStateNormal];
   
+  // 非系统返回按钮
   kWeakObject(self);
   [self hyb_setNavLeftButtonTitle:@"Back" onCliked:^(UIButton *sender) {
     [weakObject.navigationController popViewControllerAnimated:YES];
   }];
   [self.hyb_leftButtonItem setTitleColor:kBlueColor forState:UIControlStateNormal];
  
+  // 一行搞定导航条
   [self hyb_setNavTitle:@"Test1" rightTitles:@[@"btton1", @"button2"] rightBlock:^(NSUInteger index, UIButton *sender) {
     NSLog(@"clicked at index: %ld", index);
   }];
