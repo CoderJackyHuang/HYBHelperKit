@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HYBHelperKitBaseController.h"
 #import "HYBCommonBlockDefine.h"
 
 /**
@@ -18,7 +19,7 @@
  *
  *  @Note This class is only used in the debug mode.
  */
-@interface HYBHelperKitBaseURLController : UIViewController
+@interface HYBHelperKitBaseURLController : HYBHelperKitBaseController
 
 /**
  *	@author https://github.com/CoderJackyHuang

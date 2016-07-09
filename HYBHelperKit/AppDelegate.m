@@ -18,7 +18,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  // Override point for customization after application launch.
+  self.window = [[UIWindow alloc] initWithFrame:kScreenBounds];
+  self.window.backgroundColor = kWhiteColor;
+  
   BOOL product = NO;
   if (!product) {
     HYBHelperKitBaseURLController *vc = [HYBHelperKitBaseURLController createWithBaseURLs:^NSArray *{
@@ -28,7 +30,8 @@
     } onCallback:^(NSString *result) {
       self.baseURL = result;
       // 选好base url后，修改root window
-      self.window.rootViewController = [[ViewController alloc] init];
+      UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[ViewController new]];
+      self.window.rootViewController = nav;
     }];
     
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
@@ -36,6 +39,8 @@
   } else {
     //
   }
+  
+  [self.window makeKeyAndVisible];
   
   return YES;
 }

@@ -46,6 +46,9 @@
   self.title = @"Test Center Entrance";
   
   self.tableView = [UITableView hyb_tableViewWithSuperview:self.view delegate:self];
+  [self.tableView registerClass:[UITableViewCell class]
+         forCellReuseIdentifier:kHYBCellIdentifier];
+  self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
 }
 
 #pragma mark - UITableViewDelegate & UITableViewDataSource
@@ -59,7 +62,11 @@
   HYBHelperKitTestEntranceModel *model = [self.sources hyb_objectAtIndex:indexPath.row];
   
   if ([model isKindOfClass:[HYBHelperKitTestEntranceModel class]]) {
-    cell.textLabel.text = model.title;
+    if (kIsEmptyObject(model.title)) {
+      cell.textLabel.text = [model.vcClass description];
+    } else {
+      cell.textLabel.text = model.title;
+    }
   }
   
   return cell;

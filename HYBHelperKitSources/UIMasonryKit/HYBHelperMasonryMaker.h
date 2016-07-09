@@ -16,5 +16,6 @@
 #import "UIScrollView+HYBMasonryKit.h"
 #import "UIView+HYBMasonryKit.h"
 #import "UICollectionView+HYBMaonsryKit.h"
+#import "UIWebView+HYBMasonryKit.h"
 
 #endif /* HYBHelperMasonryMaker_h */

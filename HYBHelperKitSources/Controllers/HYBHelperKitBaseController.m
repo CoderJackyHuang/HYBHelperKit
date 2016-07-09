@@ -7,10 +7,20 @@
 //
 
 #import "HYBHelperKitBaseController.h"
+#import <objc/runtime.h>
+#import "HYBHelperKit.h"
+
+@interface HYBHelperKitBaseController ()
+
+@property (nonatomic, strong) NSMutableArray *hyb_notificationNames;
+@property (nonatomic, strong) UIActivityIndicatorView *hyb_loadingView;
+
+@end
 
 @implementation HYBHelperKitBaseController
 
 - (void)dealloc {
+  [self hyb_removeAllNotifications];
   
 #if DEBUG
   NSLog(@"%@ dealloc", [[self class] description]);
@@ -53,7 +63,6 @@
     if ([item isKindOfClass:[UIBarButtonItem class]]) {
       if ([item.customView isKindOfClass:[UIButton class]]) {
         [array addObject:item.customView];
-        break;
       }
     }
   }
@@ -73,7 +82,6 @@
     if ([item isKindOfClass:[UIBarButtonItem class]]) {
       if ([item.customView isKindOfClass:[UIButton class]]) {
         [array addObject:item.customView];
-        break;
       }
     }
   }
@@ -95,6 +103,98 @@
                                                  target:self
                                                  action:nil];
   }
+}
+
+- (void)hyb_setNavTitle:(id)title
+             rightTitle:(NSString *)rightTitle
+             rightBlock:(HYBButtonBlock)rightBlock {
+  if (kIsEmptyString(rightTitle)) {
+    return [self hyb_setNavTitle:title];
+  }
+  
+  return [self hyb_setNavTitle:title rightTitles:@[rightTitle] rightBlock:^(NSUInteger index, UIButton *sender) {
+    if (rightBlock) {
+      rightBlock(sender);
+    }
+  }];
+}
+
+- (void)hyb_setNavTitle:(id)title
+            rightTitles:(NSArray<NSString *> *)rightTitles
+             rightBlock:(HYBButtonIndexBlock)rightBlock {
+  [self hyb_setNavTitle:title];
+  
+  if (kIsArray(rightTitles) && rightTitles.count >= 1) {
+    NSUInteger i = 0;
+    NSMutableArray *rightButtons = [[NSMutableArray alloc] init];
+    for (NSString *title in rightTitles) {
+      UIButton *btn = [UIButton hyb_buttonWithTitle:title superView:nil constraints:nil touchUp:^(UIButton *sender) {
+        if (rightBlock) {
+          rightBlock(i, sender);
+        }
+      }];
+      
+      [rightButtons addObject:btn];
+      i++;
+    }
+    
+    [self _hyb_setNavItems:rightButtons isLeft:NO];
+  }
+}
+
+- (void)hyb_setNavTitle:(id)title
+            rightImages:(NSArray *)rightImages
+             rightBlock:(HYBButtonIndexBlock)rightBlock {
+  return [self hyb_setNavTitle:title
+                   rightImages:rightImages
+                 rightHgImages:nil
+                    rightBlock:rightBlock];
+}
+
+- (void)hyb_setNavTitle:(id)title
+            rightImages:(NSArray *)rightImages
+          rightHgImages:(NSArray *)rightHgImages
+             rightBlock:(HYBButtonIndexBlock)rightBlock {
+  [self hyb_setNavTitle:title];
+  
+  if (kIsArray(rightImages) && rightHgImages.count >= 1) {
+    NSUInteger i = 0;
+    NSMutableArray *rightButtons = [[NSMutableArray alloc] init];
+    for (NSString *imgName in rightImages) {
+      NSString *last = [rightHgImages hyb_objectAtIndex:i];
+      
+      UIButton *btn = [UIButton hyb_buttonWithImage:imgName superView:nil constraints:nil touchUp:^(UIButton *sender) {
+        if (rightBlock) {
+          rightBlock(i, sender);
+        }
+      }];
+      
+      UIImage *hgImage = nil;
+      if ([last isKindOfClass:[UIImage class]]) {
+        hgImage = (UIImage *)last;
+      } else if ([last isKindOfClass:[NSString class]]) {
+        hgImage = kImage(last);
+      }
+      
+      if (hgImage) {
+        [btn setImage:hgImage forState:UIControlStateHighlighted];
+      }
+      
+      [rightButtons addObject:btn];
+      i++;
+    }
+    
+    [self _hyb_setNavItems:rightButtons isLeft:NO];
+  }
+}
+
+- (void)hyb_setNavLeftButtonTitle:(NSString *)title onCliked:(HYBButtonBlock)block {
+  UIButton *btn = [UIButton hyb_buttonWithTitle:title
+                                      superView:nil
+                                    constraints:nil
+                                        touchUp:block];
+  
+  [self _hyb_setNavItems:@[btn] isLeft:YES];
 }
 
 - (void)hyb_setNavLeftImage:(id)image block:(HYBButtonBlock)block {
@@ -124,6 +224,93 @@
   }
 }
 
+#pragma mark - Notification
+- (void)hyb_addObserverWithNotificationName:(NSString *)notificationName
+                                   callback:(HYBNotificationBlock)callback {
+  if (kIsEmptyString(notificationName)) {
+    return;
+  }
+  
+  [self hyb_addNotificationName:notificationName];
+  
+  [kNotificationCenter addObserver:self
+                          selector:@selector(hyb_onRecievedNotification:)
+                              name:notificationName
+                            object:nil];
+  objc_setAssociatedObject(self,
+                           (__bridge const void *)(notificationName),
+                           callback,
+                           OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (void)hyb_removeAllNotifications {
+  // 移除监听
+  for (NSString *name in self.hyb_notificationNames) {
+    [kNotificationCenter removeObserver:self name:name object:nil];
+    // 取消关联
+    objc_setAssociatedObject(self,
+                             (__bridge const void *)(name),
+                             nil,
+                             OBJC_ASSOCIATION_COPY_NONATOMIC);
+  }
+  
+  [kNotificationCenter removeObserver:self];
+}
+
+- (void)hyb_removeAllNotificationWithName:(NSString *)nofiticationName {
+  if (kIsEmptyString(nofiticationName)) {
+    return;
+  }
+  
+  // 移除监听
+  for (NSString *name in self.hyb_notificationNames) {
+    if ([name isEqualToString:nofiticationName]) {
+      [kNotificationCenter removeObserver:self name:name object:nil];
+      // 取消关联
+      objc_setAssociatedObject(self,
+                               (__bridge const void *)(name),
+                               nil,
+                               OBJC_ASSOCIATION_COPY_NONATOMIC);
+      break;
+    }
+  }
+}
+
+- (UIActivityIndicatorView *)hyb_startIndicatorAnimating {
+  return [self hyb_startIndicatorAnimatingWithStyle:UIActivityIndicatorViewStyleGray];
+}
+
+- (UIActivityIndicatorView *)hyb_startIndicatorAnimatingWithStyle:(UIActivityIndicatorViewStyle)style {
+  if (self.hyb_loadingView == nil) {
+    self.hyb_loadingView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:style];
+    [self.view addSubview:self.hyb_loadingView];
+    
+    kWeakObject(self);
+    if (self.navigationController && self.navigationController.navigationBarHidden == NO) {
+      [self.hyb_loadingView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(weakObject.view);
+        make.centerY.equalTo(weakObject.view).offset(-64 / 2);
+      }];
+    } else {
+      [self.hyb_loadingView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.equalTo(weakObject.view);
+      }];
+    }
+  }
+  
+  [self.view bringSubviewToFront:self.hyb_loadingView];
+  [self.hyb_loadingView startAnimating];
+  
+  return self.hyb_loadingView;
+}
+
+- (void)hyb_stopIndicatorAnimating {
+  [self.hyb_loadingView stopAnimating];
+  
+  [self.hyb_loadingView removeFromSuperview];
+  self.hyb_loadingView = nil;
+}
+
 #pragma mark - Private
 - (void)_hyb_setNavItems:(NSArray *)buttons isLeft:(BOOL)isLeft {
   UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]
@@ -150,6 +337,38 @@
   } else {
     self.navigationItem.rightBarButtonItems = items;
   }
+}
+
+- (void)hyb_addNotificationName:(NSString *)name {
+  for (NSString *notificationName in self.hyb_notificationNames) {
+    if ([notificationName isEqualToString:name]) {
+      return;
+    }
+  }
+  
+  [self.hyb_notificationNames addObject:name];
+}
+
+- (void)hyb_onRecievedNotification:(NSNotification *)notification {
+  for (NSString *name in self.hyb_notificationNames) {
+    if ([name isEqualToString:notification.name]) {
+      HYBNotificationBlock block = objc_getAssociatedObject(self,
+                                                            (__bridge const void *)(notification.name));
+      if (block) {
+        block(notification);
+      }
+      
+      break;
+    }
+  }
+}
+
+- (NSMutableArray *)hyb_notificationNames {
+  if (_hyb_notificationNames == nil) {
+    _hyb_notificationNames = [[NSMutableArray alloc] init];
+  }
+  
+  return _hyb_notificationNames;
 }
 
 @end

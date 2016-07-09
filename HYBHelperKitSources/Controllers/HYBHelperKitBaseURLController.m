@@ -6,7 +6,6 @@
 //  Copyright © 2016年 huangyibiao. All rights reserved.
 //
 
-#import "HYBHelperKitBaseURLController.h"
 #import "HYBHelperKit.h"
 
 @interface HYBHelperKitBaseURLController () <UITableViewDelegate, UITableViewDataSource>

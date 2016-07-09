@@ -58,7 +58,7 @@
  *
  *  @Note Auto push to the next veiw controller when select an item. 
  */
-@interface HYBHelperKitTestEntranceController : UIViewController
+@interface HYBHelperKitTestEntranceController : HYBHelperKitBaseController
 
 /**
  *	@author https://github.com/CoderJackyHuang

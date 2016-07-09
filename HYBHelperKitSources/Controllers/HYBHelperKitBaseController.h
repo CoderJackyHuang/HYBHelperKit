@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "HYBHelperKit.h"
+#import "HYBHelperCommonKit.h"
+#import "HYBHelperConstants.h"
 
 /**
  *	@author https://github.com/CoderJackyHuang
@@ -20,7 +21,7 @@
 /**
  *	@author https://github.com/CoderJackyHuang
  *
- *	Get the left item which using a button as custom view. It may be nil if 
+ *	Get the left item which using a button as custom view. It may be nil if
  *  navigation item left items are empty.
  */
 @property (nonatomic, strong, readonly) UIButton *hyb_leftButtonItem;
@@ -28,7 +29,7 @@
 /**
  *	@author https://github.com/CoderJackyHuang
  *
- *	Get all of left items that using button as custom view. It may be nil if 
+ *	Get all of left items that using button as custom view. It may be nil if
  *  navigation item left items are empty.
  */
 @property (nonatomic, strong, readonly) NSArray<UIButton *> *hyb_leftButtonItems;
@@ -44,7 +45,7 @@
 /**
  *	@author https://github.com/CoderJackyHuang
  *
- *	Get all right button items. When using ti to access right buttons. It may be nil if 
+ *	Get all right button items. When using ti to access right buttons. It may be nil if
  *  there is no navigation right items.
  */
 @property (nonatomic, strong, readonly) NSArray<UIButton *> *hyb_rightButtonItems;
@@ -68,24 +69,69 @@
  */
 - (void)hyb_setNavTitle:(id)title;
 
+/**
+ *	@author https://github.com/CoderJackyHuang
+ *
+ *	Add a title or title view to the navigation item, and add a button to the
+ *  navigation item right item with callback.
+ *
+ *	@param title			The title view or a title.
+ *	@param rightTitle	The right button item title.
+ *	@param rightBlock	The button event callback.
+ */
 - (void)hyb_setNavTitle:(id)title
-         rightTitle:(NSString *)rightTitle
-         rightBlock:(HYBButtonBlock)rightBlock;
+             rightTitle:(NSString *)rightTitle
+             rightBlock:(HYBButtonBlock)rightBlock;
 
+/**
+ *	@author https://github.com/CoderJackyHuang
+ *
+ *	Add a title or title view, right items with titles to the navigation item.
+ *
+ *	@param title				The title view
+ *	@param rightTitles	The right item button titles
+ *	@param rightBlock	The callback of button touch up event.
+ */
 - (void)hyb_setNavTitle:(id)title
-        rightTitles:(NSArray<NSString *> *)rightTitles
-         rightBlock:(HYBButtonIndexBlock)rightBlock;
+            rightTitles:(NSArray<NSString *> *)rightTitles
+             rightBlock:(HYBButtonIndexBlock)rightBlock;
 
+/**
+ *	@author https://github.com/CoderJackyHuang
+ *
+ *	Add a title or title view, right items with images to the navigation item.
+ *
+ *	@param title        The title view
+ *	@param rightImages	The right item button normal images.
+ *	@param rightBlock	  The callback of button touch up event.
+ */
 - (void)hyb_setNavTitle:(id)title
-     rightImages:(NSArray *)rightImages
-         rightBlock:(HYBButtonBlock)rightBlock;
+            rightImages:(NSArray *)rightImages
+             rightBlock:(HYBButtonIndexBlock)rightBlock;
 
+/**
+ *	@author https://github.com/CoderJackyHuang
+ *
+ *	Add a title or title view, right items with images to the navigation item.
+ *
+ *	@param title        The title view
+ *	@param rightImages	The right item button  normal images.
+ *  @param rightHgImages The right item button highlighted images.
+ *	@param rightBlock	  The callback of button touch up event.
+ */
 - (void)hyb_setNavTitle:(id)title
-    rightImages:(NSArray *)rightImages
-  rightHgImages:(NSArray *)rightHgImages
-         rightBlock:(HYBButtonIndexBlock)rightBlock;
+            rightImages:(NSArray *)rightImages
+          rightHgImages:(NSArray *)rightHgImages
+             rightBlock:(HYBButtonIndexBlock)rightBlock;
 
-
+/**
+ *	@author https://github.com/CoderJackyHuang
+ *
+ *	Set navigation left item with button title.
+ *
+ *	@param title	The title of left item button.
+ *	@param block	The button touch up event callback.
+ */
 - (void)hyb_setNavLeftButtonTitle:(NSString *)title onCliked:(HYBButtonBlock)block;
 
 /**
@@ -98,18 +144,61 @@
  */
 - (void)hyb_setNavLeftImage:(id)image block:(HYBButtonBlock)block;
 
-#pragma mark -
-
+#pragma mark - About indicator animating
+/**
+ *	@author https://github.com/CoderJackyHuang
+ *
+ *	Create an UIActivityIndicatorView view with UIActivityIndicatorViewStyleGray style
+ *
+ *	@return The instance of UIActivityIndicatorView
+ */
 - (UIActivityIndicatorView *)hyb_startIndicatorAnimating;
+
+/**
+ *	@author https://github.com/CoderJackyHuang
+ *
+ *	Create an UIActivityIndicatorView view with specified style.
+ *
+ *	@param style	The indicator view style
+ *
+ *	@return The instance of UIActivityIndicatorView
+ */
 - (UIActivityIndicatorView *)hyb_startIndicatorAnimatingWithStyle:(UIActivityIndicatorViewStyle)style;
 
+/**
+ *	@author https://github.com/CoderJackyHuang
+ *
+ *	Stop animating of indicator and remove from super view.
+ */
 - (void)hyb_stopIndicatorAnimating;
 
-#pragma mark -
-- (void)hybaddObserverWithNotificationName:(NSString *)notificationName
-                                  callback:(HYBNotificationBlock)callback;
+#pragma mark - Notification
+/**
+ *	@author https://github.com/CoderJackyHuang
+ *
+ *	Add a notification to the notification center with notification name.
+ *
+ *	@param notificationName	The name of notification
+ *	@param callback					The callback when received the notification.
+ */
+- (void)hyb_addObserverWithNotificationName:(NSString *)notificationName
+                                   callback:(HYBNotificationBlock)callback;
 
+/**
+ *	@author https://github.com/CoderJackyHuang
+ *
+ *	Remove all notifications of the view controller.
+ */
 - (void)hyb_removeAllNotifications;
+
+/**
+ *	@author https://github.com/CoderJackyHuang
+ *
+ *	Remove the specified notification with notification name from notification
+ *  center.
+ *
+ *	@param nofiticationName	The notification name.
+ */
 - (void)hyb_removeAllNotificationWithName:(NSString *)nofiticationName;
 
 @end
