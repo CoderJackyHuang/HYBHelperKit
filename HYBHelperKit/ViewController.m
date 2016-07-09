@@ -18,12 +18,17 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   
-  
+  self.view.backgroundColor = kWhiteColor;
 }
 
-- (void)didReceiveMemoryWarning {
-  [super didReceiveMemoryWarning];
-  // Dispose of any resources that can be recreated.
+
+- (IBAction)onEnterToTestCenter:(id)sender {
+  HYBHelperKitTestEntranceController *vc = [[HYBHelperKitTestEntranceController alloc] initWithItems:^NSArray *{
+    return @[[HYBHelperKitTestEntranceModel modelWithClass:[UIViewController class] title:nil],
+            [HYBHelperKitTestEntranceModel modelWithClass:[UIViewController class] title:@"Test"]
+    ];
+  }];
+  [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

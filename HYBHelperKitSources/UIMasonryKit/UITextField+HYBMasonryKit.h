@@ -32,8 +32,8 @@
  *	@return The text field instance.
  */
 + (instancetype)hyb_textFieldWithHolder:(NSString *)holder
-                                    superView:(UIView *)superView
-                                  constraints:(HYBConstraintMaker)constraints;
+                              superView:(UIView *)superView
+                            constraints:(HYBConstraintMaker)constraints;
 
 /**
  *	@author https://github.com/CoderJackyHuang
@@ -48,9 +48,9 @@
  *	@return The text field instance.
  */
 + (UITextField *)hyb_textFieldWithHolder:(NSString *)holder
-                                     delegate:(id<UITextFieldDelegate>)delegate
-                                    superView:(UIView *)superView
-                                  constraints:(HYBConstraintMaker)constraints;
+                                delegate:(id<UITextFieldDelegate>)delegate
+                               superView:(UIView *)superView
+                             constraints:(HYBConstraintMaker)constraints;
 
 /**
  *	@author https://github.com/CoderJackyHuang
@@ -65,9 +65,9 @@
  *	@return The text field instance.
  */
 + (UITextField *)hyb_textFieldWithHolder:(NSString *)holder
-                                         text:(NSString *)text
-                                    superView:(UIView *)superView
-                                  constraints:(HYBConstraintMaker)constraints;
+                                    text:(NSString *)text
+                               superView:(UIView *)superView
+                             constraints:(HYBConstraintMaker)constraints;
 
 /**
  *	@author https://github.com/CoderJackyHuang
@@ -83,9 +83,9 @@
  *	@return The text field instance.
  */
 + (UITextField *)hyb_textFieldWithHolder:(NSString *)holder
-                                         text:(NSString *)text
-                                     delegate:(id<UITextFieldDelegate>)delegate
-                                    superView:(UIView *)superView
-                                  constraints:(HYBConstraintMaker)constraints;
+                                    text:(NSString *)text
+                                delegate:(id<UITextFieldDelegate>)delegate
+                               superView:(UIView *)superView
+                             constraints:(HYBConstraintMaker)constraints;
 
 @end

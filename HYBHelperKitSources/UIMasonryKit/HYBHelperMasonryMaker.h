@@ -11,5 +11,10 @@
 
 #import "UITableView+HYBMasonryKit.h"
 #import "UITextField+HYBMasonryKit.h"
+#import "UIImageView+HYBMasonryKit.h"
+#import "UILabel+HYBMasonryKit.h"
+#import "UIScrollView+HYBMasonryKit.h"
+#import "UIView+HYBMasonryKit.h"
+#import "UICollectionView+HYBMaonsryKit.h"
 
 #endif /* HYBHelperMasonryMaker_h */

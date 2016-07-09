@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "HYBHelperKit.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,24 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   // Override point for customization after application launch.
+  BOOL product = NO;
+  if (!product) {
+    HYBHelperKitBaseURLController *vc = [HYBHelperKitBaseURLController createWithBaseURLs:^NSArray *{
+      return @[@"http://101.200.209.244",
+               @"http://www.huangyibiao.com",
+               ];
+    } onCallback:^(NSString *result) {
+      self.baseURL = result;
+      // 选好base url后，修改root window
+      self.window.rootViewController = [[ViewController alloc] init];
+    }];
+    
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    self.window.rootViewController = nav;
+  } else {
+    //
+  }
+  
   return YES;
 }
 

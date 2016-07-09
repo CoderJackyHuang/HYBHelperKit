@@ -9,5 +9,8 @@
 #ifndef HYBHelperControllers_h
 #define HYBHelperControllers_h
 
+#import "HYBHelperKitBaseURLController.h"
+#import "HYBHelperKitTestEntranceController.h"
+#import "HYBHelperKitBaseController.h"
 
 #endif /* HYBHelperControllers_h */

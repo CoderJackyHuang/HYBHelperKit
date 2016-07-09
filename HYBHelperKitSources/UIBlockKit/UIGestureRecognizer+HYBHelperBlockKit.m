@@ -9,14 +9,21 @@
 #import "UIGestureRecognizer+HYBHelperBlockKit.h"
 #import <objc/runtime.h>
 
+static const void *s_hyb_gestureKey = "s_hyb_gestureKey";
+static const void *s_hyb_tap_gestureKey = "s_hyb_tap_gestureKey";
+static const void *s_hyb_long_gestureKey = "s_hyb_long_gestureKey";
+
 @implementation UIGestureRecognizer (HYBHelperBlockKit)
 
 - (HYBGestureBlock)hyb_onGesture {
-  return objc_getAssociatedObject(self, _cmd);
+  return objc_getAssociatedObject(self, s_hyb_gestureKey);
 }
 
 - (void)setHyb_onGesture:(HYBGestureBlock)hyb_onGesture {
-  objc_setAssociatedObject(self, _cmd, hyb_onGesture, OBJC_ASSOCIATION_COPY);
+  objc_setAssociatedObject(self,
+                           s_hyb_gestureKey,
+                           hyb_onGesture,
+                           OBJC_ASSOCIATION_COPY_NONATOMIC);
  
   [self removeTarget:self action:@selector(hyb_private_onGesture:)];
   
@@ -26,11 +33,14 @@
 }
 
 - (HYBTapGestureBlock)hyb_onTaped {
-  return objc_getAssociatedObject(self, _cmd);
+  return objc_getAssociatedObject(self, s_hyb_tap_gestureKey);
 }
 
 - (void)setHyb_onTaped:(HYBTapGestureBlock)hyb_onTaped {
-  objc_setAssociatedObject(self, _cmd, hyb_onTaped, OBJC_ASSOCIATION_COPY);
+  objc_setAssociatedObject(self,
+                           s_hyb_tap_gestureKey,
+                           hyb_onTaped,
+                           OBJC_ASSOCIATION_COPY_NONATOMIC);
   
   [self removeTarget:self action:@selector(hyb_private_onTaped:)];
   
@@ -40,11 +50,14 @@
 }
 
 - (HYBLongGestureBlock)hyb_onLongPressed {
-  return objc_getAssociatedObject(self, _cmd);
+  return objc_getAssociatedObject(self, s_hyb_long_gestureKey);
 }
 
 - (void)setHyb_onLongPressed:(HYBLongGestureBlock)hyb_onLongPressed {
-  objc_setAssociatedObject(self, _cmd, hyb_onLongPressed, OBJC_ASSOCIATION_COPY);
+  objc_setAssociatedObject(self,
+                           s_hyb_long_gestureKey,
+                           hyb_onLongPressed,
+                           OBJC_ASSOCIATION_COPY_NONATOMIC);
   
   [self removeTarget:self action:@selector(hyb_private_onLongPressed:)];
   

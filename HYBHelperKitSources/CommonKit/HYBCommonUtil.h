@@ -30,4 +30,10 @@
 // Degrees convert to randians.
 #define kDegreesToRadians(angle) ((angle) / 180.0 * M_PI)
 
+// Fast to get iOS system version
+#define kIOSVersion ([UIDevice currentDevice].systemVersion.floatValue)
+
+// More fast way to get app delegate
+#define kAppDelegate ((AppDelegate *)[[UIApplication  sharedApplication] delegate])
+
 #endif /* HYBCommonUtil_h */

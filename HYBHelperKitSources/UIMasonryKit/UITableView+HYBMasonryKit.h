@@ -76,7 +76,7 @@
  *	@param style        @see UITableViewStyle.
  *	@param constraints	Make constraints for table view.
  *
- *	@return <#return value description#>
+ *	@return The table view instance.
  */
 + (instancetype)hyb_tableViewWithSuperview:(UIView *)superView
                                   delegate:(id)delegate

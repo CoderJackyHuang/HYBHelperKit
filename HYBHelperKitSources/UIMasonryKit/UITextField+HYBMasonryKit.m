@@ -8,6 +8,7 @@
 
 #import "UITextField+HYBMasonryKit.h"
 #import <objc/runtime.h>
+#import "UIView+HYBHelperKitUIKit.h"
 
 @implementation UITextField (HYBMasonryKit)
 
@@ -26,6 +27,69 @@
                            _cmd,
                            @(hyb_leftMarginOfCursor),
                            OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+  
+  if (self.leftView) {
+    self.leftView.hyb_width = hyb_leftMarginOfCursor;
+  }
+}
+
++ (instancetype)hyb_textFieldWithHolder:(NSString *)holder
+                              superView:(UIView *)superView
+                            constraints:(HYBConstraintMaker)constraints {
+  return [self hyb_textFieldWithHolder:holder
+                                  text:nil
+                             superView:superView
+                           constraints:constraints];
+}
+
++ (UITextField *)hyb_textFieldWithHolder:(NSString *)holder
+                                    text:(NSString *)text
+                               superView:(UIView *)superView
+                             constraints:(HYBConstraintMaker)constraints {
+  return [self hyb_textFieldWithHolder:holder
+                                  text:text
+                              delegate:nil
+                             superView:superView
+                           constraints:constraints];
+}
+
++ (UITextField *)hyb_textFieldWithHolder:(NSString *)holder
+                                delegate:(id<UITextFieldDelegate>)delegate
+                               superView:(UIView *)superView
+                             constraints:(HYBConstraintMaker)constraints {
+  return [self hyb_textFieldWithHolder:holder
+                                  text:nil
+                              delegate:delegate
+                             superView:superView
+                           constraints:constraints];
+}
+
++ (UITextField *)hyb_textFieldWithHolder:(NSString *)holder
+                                    text:(NSString *)text
+                                delegate:(id<UITextFieldDelegate>)delegate
+                               superView:(UIView *)superView
+                             constraints:(HYBConstraintMaker)constraints {
+  UITextField *textField = [[UITextField alloc] init];
+  textField.borderStyle = UITextBorderStyleNone;
+  textField.leftView = [[UIView alloc] init];
+  textField.leftView.backgroundColor = [UIColor clearColor];
+  textField.leftView.hyb_width = textField.hyb_leftMarginOfCursor;
+  textField.autocapitalizationType = UITextAutocapitalizationTypeNone;
+  textField.autocorrectionType = UITextAutocorrectionTypeNo;
+  textField.spellCheckingType = UITextSpellCheckingTypeNo;
+  textField.delegate = delegate;
+  [superView addSubview:textField];
+  
+  textField.placeholder = holder;
+  textField.text = text;
+  
+  if (superView && constraints) {
+    [textField mas_makeConstraints:^(MASConstraintMaker *make) {
+      constraints(make);
+    }];
+  }
+  
+  return textField;
 }
 
 @end

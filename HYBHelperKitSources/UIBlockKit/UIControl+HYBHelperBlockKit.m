@@ -9,14 +9,19 @@
 #import "UIControl+HYBHelperBlockKit.h"
 #import <objc/runtime.h>
 
+static const void *s_HYBButtonTouchUpKey = "s_HYBButtonTouchUpKey";
+static const void *s_HYBButtonTouchDownKey = "s_HYBButtonTouchDownKey";
+static const void *s_HYBOnValueChangedKey = "s_HYBOnValueChangedKey";
+static const void *s_HYBOnEditChangedKey = "s_HYBOnEditChangedKey";
+
 @implementation UIControl (HYBHelperBlockKit)
 
 - (HYBButtonBlock)hyb_onTouchUp {
-  return objc_getAssociatedObject(self, _cmd);
+  return objc_getAssociatedObject(self, s_HYBButtonTouchUpKey);
 }
 
 - (void)setHyb_onTouchUp:(HYBButtonBlock)hyb_onTouchUp {
-  objc_setAssociatedObject(self, _cmd, hyb_onTouchUp, OBJC_ASSOCIATION_COPY);
+  objc_setAssociatedObject(self, s_HYBButtonTouchUpKey, hyb_onTouchUp, OBJC_ASSOCIATION_COPY_NONATOMIC);
   
   [self removeTarget:self
               action:@selector(hyb_private_onTouchUp:)
@@ -30,12 +35,10 @@
 }
 
 - (HYBButtonBlock)hyb_onTouchDown {
-  return objc_getAssociatedObject(self, _cmd);
+  return objc_getAssociatedObject(self, s_HYBButtonTouchDownKey);
 }
 
 - (void)setHyb_onTouchDown:(HYBButtonBlock)hyb_onTouchDown {
-  objc_setAssociatedObject(self, _cmd, hyb_onTouchDown, OBJC_ASSOCIATION_COPY);
-  
   [self removeTarget:self
               action:@selector(hyb_private_onTouchDown:)
     forControlEvents:UIControlEventTouchDown];
@@ -45,14 +48,22 @@
              action:@selector(hyb_private_onTouchDown:)
    forControlEvents:UIControlEventTouchDown];
   }
+  
+  objc_setAssociatedObject(self,
+                           s_HYBButtonTouchDownKey,
+                           hyb_onTouchDown,
+                           OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
 - (HYBValueChangedBlock)hyb_onValueChanged {
-  return objc_getAssociatedObject(self, _cmd);
+  return objc_getAssociatedObject(self, s_HYBOnValueChangedKey);
 }
 
 - (void)setHyb_onValueChanged:(HYBValueChangedBlock)hyb_onValueChanged {
-  objc_setAssociatedObject(self, _cmd, hyb_onValueChanged, OBJC_ASSOCIATION_COPY);
+  objc_setAssociatedObject(self,
+                           s_HYBOnValueChangedKey,
+                           hyb_onValueChanged,
+                           OBJC_ASSOCIATION_COPY_NONATOMIC);
   
   [self removeTarget:self
               action:@selector(hyb_private_onValueChanged:)
@@ -66,11 +77,14 @@
 }
 
 - (HYBEditChangedBlock)hyb_onEditChanged {
-  return objc_getAssociatedObject(self, _cmd);
+  return objc_getAssociatedObject(self, s_HYBOnEditChangedKey);
 }
 
 - (void)setHyb_onEditChanged:(HYBEditChangedBlock)hyb_onEditChanged {
-  objc_setAssociatedObject(self, _cmd, hyb_onEditChanged, OBJC_ASSOCIATION_COPY);
+  objc_setAssociatedObject(self,
+                           s_HYBOnEditChangedKey,
+                           hyb_onEditChanged,
+                           OBJC_ASSOCIATION_COPY_NONATOMIC);
   
   [self removeTarget:self
               action:@selector(hyb_private_onEditChanged:)

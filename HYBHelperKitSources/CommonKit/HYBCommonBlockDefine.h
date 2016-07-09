@@ -10,6 +10,7 @@
 #define HYBCommonBlockDefine_h
 
 #import <UIKit/UIKit.h>
+#import "Masonry.h"
 
 /**
  *	This is a common block for handling error.
@@ -124,5 +125,12 @@ typedef void(^HYBLongGestureBlock)(UILongPressGestureRecognizer *sender);
  *	@param sender	The tap gesture.
  */
 typedef void(^HYBTapGestureBlock)(UITapGestureRecognizer *sender);
+
+/**
+ *	@author https://github.com/CoderJackyHuang
+ *
+ *	Masonry Kit Need To Use It.
+ */
+typedef void(^HYBConstraintMaker)(MASConstraintMaker *make);
 
 #endif /* HYBCommonBlockDefine_h */

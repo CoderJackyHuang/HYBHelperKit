@@ -9,5 +9,7 @@
 #ifndef HYBHelperConstants_h
 #define HYBHelperConstants_h
 
+#import "HYBColorDefine.h"
+#import "HYBStaticConstants.h"
 
 #endif /* HYBHelperConstants_h */

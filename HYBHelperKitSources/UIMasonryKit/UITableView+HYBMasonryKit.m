@@ -45,6 +45,7 @@
   UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectZero style:style];
   tableView.delegate = delegate;
   tableView.dataSource = delegate;
+  tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
   
   [superView addSubview:tableView];
   
