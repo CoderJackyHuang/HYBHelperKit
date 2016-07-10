@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "HYBHelperCommonKit.h"
+#import "HYBCommonKit.h"
 #import "HYBHelperBlocksKit.h"
 
 @interface UITableView (HYBMasonryKit)

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "HYBHelperKitBaseController.h"
-#import "HYBCommonBlockDefine.h"
+#import "HYBCommonKit.h"
 
 /**
  *	@author https://github.com/CoderJackyHuang

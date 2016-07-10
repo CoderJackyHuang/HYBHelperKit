@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "HYBCommonBlockDefine.h"
+#import "HYBCommonKit.h"
 
 @interface UIControl (HYBHelperBlockKit)
 

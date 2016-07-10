@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "HYBHelperCommonKit.h"
 #import "HYBHelperBlocksKit.h"
+#import "HYBCommonKit.h"
 
 @interface UIButton (HYBHelperBlockKit)
 

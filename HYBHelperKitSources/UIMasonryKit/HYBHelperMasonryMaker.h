@@ -6,9 +6,6 @@
 //  Copyright © 2016年 huangyibiao. All rights reserved.
 //
 
-#ifndef HYBHelperMasonryMaker_h
-#define HYBHelperMasonryMaker_h
-
 #import "UITableView+HYBMasonryKit.h"
 #import "UITextField+HYBMasonryKit.h"
 #import "UIImageView+HYBMasonryKit.h"
@@ -17,5 +14,3 @@
 #import "UIView+HYBMasonryKit.h"
 #import "UICollectionView+HYBMaonsryKit.h"
 #import "UIWebView+HYBMasonryKit.h"
-
-#endif /* HYBHelperMasonryMaker_h */

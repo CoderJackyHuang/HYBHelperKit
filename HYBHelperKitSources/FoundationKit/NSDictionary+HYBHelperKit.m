@@ -7,7 +7,7 @@
 //
 
 #import "NSDictionary+HYBHelperKit.h"
-#import "HYBHelperCommonKit.h"
+#import "HYBCommonKit.h"
 
 @implementation NSDictionary (HYBHelperKit)
 

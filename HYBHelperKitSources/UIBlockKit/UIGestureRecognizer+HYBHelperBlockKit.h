@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "HYBHelperCommonKit.h"
+#import "HYBCommonKit.h"
 
 @interface UIGestureRecognizer (HYBHelperBlockKit)
 

@@ -6,12 +6,9 @@
 //  Copyright © 2016年 huangyibiao. All rights reserved.
 //
 
-#ifndef HYBHelperBlocksKit_h
-#define HYBHelperBlocksKit_h
 
 #import "UIButton+HYBHelperBlockKit.h"
 #import "UIControl+HYBHelperBlockKit.h"
 #import "UIGestureRecognizer+HYBHelperBlockKit.h"
 #import "UIView+HYBHelperBlockKit.h"
 
-#endif /* HYBHelperBlocksKit_h */

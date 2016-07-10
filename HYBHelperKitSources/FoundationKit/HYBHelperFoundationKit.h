@@ -6,17 +6,13 @@
 //  Copyright © 2016年 huangyibiao. All rights reserved.
 //
 
-#ifndef HYBHelperFoundationKit_h
-#define HYBHelperFoundationKit_h
+#import "NSObject+HYBHelperKit.h"
+#import "NSString+HYBHelperKit.h"
+#import "NSUserDefaults+HYBHelperKit.h"
+#import "NSTimer+HYBHelperKit.h"
+#import "NSMutableArray+HYBHelperKit.h"
+#import "NSArray+HYBHelperKit.h"
+#import "NSDictionary+HYBHelperKit.h"
+#import "NSMutableDictionary+HYBHelperKit.h"
+#import "NSFileManager+HYBHelperKit.h"
 
-#include "NSObject+HYBHelperKit.h"
-#include "NSString+HYBHelperKit.h"
-#include "NSUserDefaults+HYBHelperKit.h"
-#include "NSTimer+HYBHelperKit.h"
-#include "NSMutableArray+HYBHelperKit.h"
-#include "NSArray+HYBHelperKit.h"
-#include "NSDictionary+HYBHelperKit.h"
-#include "NSMutableDictionary+HYBHelperKit.h"
-#include "NSFileManager+HYBHelperKit.h"
-
-#endif /* HYBHelperFoundationKit_h */
