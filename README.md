@@ -1,5 +1,8 @@
 # HYBHelperKit
 
+=========
+[![Build Status](https://travis-ci.org/CoderJackyHuang/HYBHelperKit.svg?branch=master)](https://travis-ci.org/CoderJackyHuang/HYBHelperKit)
+
 日常开发必不可少的神器之一，UIBlockKit、UIMakerKit、UIKit、CommonKit、FoundationKit、Controllers、Constants等集于一身的神器！
 
 
