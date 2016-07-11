@@ -230,7 +230,7 @@
   }
   
   if (len >= self.length) {
-    len = self.length;
+    len = self.length - 1;
   }
   
   return [self substringFromIndex:len];
@@ -248,6 +248,10 @@
   
   if (index + 1 < self.length) {
     index++;
+  }
+  
+  if (index + 1 >= self.length) {
+    return self;
   }
   
   return [self substringToIndex:index];
