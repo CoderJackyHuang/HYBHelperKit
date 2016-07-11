@@ -130,7 +130,7 @@ alpha:(a)])
 && [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
 
 // Judge whether current orientation is landscape.
-#define kIsLandscape (UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation])
+#define kIsLandscape (UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]))
 
 #pragma makr - Color
 /**
