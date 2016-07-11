@@ -72,7 +72,6 @@
 		6920F68A1D320E9600D89D07 /* TestViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController1.m; sourceTree = "<group>"; };
 		6920F80B1D3351DB00D89D07 /* HYBCommonKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBCommonKit.h; sourceTree = "<group>"; };
 		6920F80C1D3351DB00D89D07 /* HYBCommonKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYBCommonKit.m; sourceTree = "<group>"; };
-		6920F80D1D3351DB00D89D07 /* HYBHelperFoundationKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBHelperFoundationKit.h; sourceTree = "<group>"; };
 		6920F80E1D3351DB00D89D07 /* HYBHelperKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBHelperKit.h; sourceTree = "<group>"; };
 		6920F80F1D3351DB00D89D07 /* HYBHelperKitBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBHelperKitBaseController.h; sourceTree = "<group>"; };
 		6920F8101D3351DB00D89D07 /* HYBHelperKitBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYBHelperKitBaseController.m; sourceTree = "<group>"; };
@@ -230,7 +229,6 @@
 		6920F8681D3351F500D89D07 /* FoudationKit */ = {
 			isa = PBXGroup;
 			children = (
-				6920F80D1D3351DB00D89D07 /* HYBHelperFoundationKit.h */,
 				6920F8161D3351DB00D89D07 /* NSArray+HYBHelperKit.h */,
 				6920F8171D3351DB00D89D07 /* NSArray+HYBHelperKit.m */,
 				6920F8181D3351DB00D89D07 /* NSDictionary+HYBHelperKit.h */,
