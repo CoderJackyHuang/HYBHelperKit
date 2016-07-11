@@ -1,5 +1,5 @@
 //
-//  HYBCommonKIt.m
+//  HYBCommonKit.m
 //  HYBHelperKit
 //
 //  Created by huangyibiao on 16/7/11.
