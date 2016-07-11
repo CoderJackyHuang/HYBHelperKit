@@ -1,7 +1,6 @@
 coverage:
   ignore:
-    - HYBHelperKit/*
-    - AppDevKitTests/*
+    - HYBHelperKitTests/*
     - Pods/*
   status:
     patch: false
