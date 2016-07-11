@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "HYBHelperKit"
-  s.version      = "0.0.1"
+  s.version      = "0.1.1"
   s.summary      = "日常开发必不可少的神器之一，UIBlockKit、UIMakerKit、UIHelperKit、CommonKit、FoundationKit、Controllers、Constants等集于一身的神器！"
 
   s.description  = <<-DESC
