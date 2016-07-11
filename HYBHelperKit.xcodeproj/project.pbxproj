@@ -175,8 +175,7 @@
 		6920F62B1D320DE800D89D07 /* HYBHelperKitSources */ = {
 			isa = PBXGroup;
 			children = (
-				6920F62C1D320DE800D89D07 /* HYBCommonKit.h */,
-				6920F7841D33477500D89D07 /* HYBCommonKit.m */,
+				6920F7861D334BE000D89D07 /* CommonKit */,
 				6920F62F1D320DE800D89D07 /* HYBHelperKit.h */,
 				6920F6831D320DF800D89D07 /* Controllers */,
 				6920F6851D320E1000D89D07 /* FoundationKit */,
@@ -278,6 +277,15 @@
 				6920F6611D320DE800D89D07 /* UIView+HYBHelperBlockKit.m */,
 			);
 			name = UIBlocksKit;
+			sourceTree = "<group>";
+		};
+		6920F7861D334BE000D89D07 /* CommonKit */ = {
+			isa = PBXGroup;
+			children = (
+				6920F62C1D320DE800D89D07 /* HYBCommonKit.h */,
+				6920F7841D33477500D89D07 /* HYBCommonKit.m */,
+			);
+			name = CommonKit;
 			sourceTree = "<group>";
 		};
 		69489E771D23790E00F90205 = {

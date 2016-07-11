@@ -125,7 +125,7 @@
     return [number boolValue];
   }
   
-  return nil;
+  return NO;
 }
 
 - (unsigned long long)hyb_unsignedLongLongValue:(id<NSCopying>)key {
