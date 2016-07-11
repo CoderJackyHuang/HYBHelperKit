@@ -1,7 +1,18 @@
 # HYBHelperKit
 
+
+[![Build Status](https://travis-ci.org/CoderJackyHuang/HYBHelperKit.svg?branch=master)](https://travis-ci.org/CoderJackyHuang/HYBHelperKit)
+[![CocoaPods](https://img.shields.io/cocoapods/v/HYBHelperKit.svg?maxAge=2592000?style=flat-square)](https://cocoapods.org/?q=HYBHelperKit)
+
 日常开发必不可少的神器之一，UIBlockKit、UIMakerKit、UIKit、CommonKit、FoundationKit、Controllers、Constants等集于一身的神器！
 
+目前具备的功能：
+
+* 通用的宏定义、blcok定义等，详细请阅读HYBCommonKit.h
+* 对常用的UI控件再次简化调用，配合Masonry自动布局，及block版本的事件响应回调，一句代码搞定！
+* 对常用的Foundation库中的类添加分类，以减少崩溃的概率
+* 对常用的控制器类的通用功能集成到基类中，如通知监听及释放、导航条配置、测试入口类、base url列表选择入口等
+* 对常用的控件封装成block版本
 
 #目录划分
 
@@ -13,7 +24,7 @@
 * UIKit：常用的UI控件分类，以简化开发
 * Controllers：辅助控制器，比如用于测试期使用的接口baseurl访问和建立测试中心入口，基类控制器等
 
-目前暂定这几个模块，后续可能会有调整！
+
 
 #单元测试
 

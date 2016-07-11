@@ -1,4 +1,6 @@
 language: objective-c
 xcode_workspace: HYBHelperkit.xcworkspace
 xcode_scheme: HYBHelperKit
+script: 
+  - date
 
