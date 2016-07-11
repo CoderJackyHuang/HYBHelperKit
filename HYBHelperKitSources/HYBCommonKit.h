@@ -285,3 +285,7 @@ typedef void(^HYBConstraintMaker)(MASConstraintMaker *make);
  *	The common cell identifier
  */
 static NSString *kHYBCellIdentifier = @"HYBCommonCellIdentifier";
+
+@interface HYBCommonKit : NSObject
+
+@end

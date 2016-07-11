@@ -14,8 +14,8 @@ Pod::Spec.new do |s|
   s.social_media_url   = "http://www.huangyibiao.com/"
   s.platform     = :ios, "7.0"
   s.source       = { :git => "https://github.com/CoderJackyHuang/HYBHelperKit.git", :tag => "v#{s.version}" }
-  s.source_files  = "HYBHelperKitSources/*.{h,m}"
-  s.public_header_files = 'HYBHelperKitSources/HYBHelperKit.h'
+  s.source_files  = "HYBHelperKitSources/*"
+#s.public_header_files = 'HYBHelperKitSources/HYBHelperKit.h'
   s.requires_arc = true
  s.dependency "Masonry", "~> 1.0.1"
 
