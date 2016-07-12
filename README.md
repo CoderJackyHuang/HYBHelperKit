@@ -33,7 +33,7 @@
 #使用
 
 ```
-pod 'HYBHelperKit', '~>0.0.1'
+pod 'HYBHelperKit'
 ```
 
 #API风格
