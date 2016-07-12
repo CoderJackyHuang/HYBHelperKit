@@ -92,6 +92,12 @@ kWeakObject(self);
 
 本开源项目会持续维护，如果有bug或者觉得可以抽一个轮子的，请拉一个issue或者pull request过来！
 
+#History Versions
+
+* V0.1.0
+  - Fix bugs
+  - Add NSDate common APIs in FoundationKit.
+
 #LICENSE
 
 MIT
