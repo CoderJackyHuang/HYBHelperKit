@@ -90,7 +90,7 @@ kWeakObject(self);
 
 #声明
 
-本开源项目会持续维护，如果有bug或者觉得可以抽一个轮子的，请拉一个issue或者pull request过来！
+本开源项目会持续维护，如果有bug或者觉得可以抽一个轮子的，请拉一个issue或者pull request过来！如果想到博客中阅读，欢迎访问[http://www.huangyibiao.com/ios-hybhelperkit/](http://www.huangyibiao.com/ios-hybhelperkit/)
 
 #History Versions
 
