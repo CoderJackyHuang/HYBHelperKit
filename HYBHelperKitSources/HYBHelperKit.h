@@ -20,6 +20,7 @@
 #import "HYBHelperKitTestEntranceController.h"
 
 // FoundationKit
+#import "NSNumber+HYBHelperKit.h"
 #import "NSObject+HYBHelperKit.h"
 #import "NSString+HYBHelperKit.h"
 #import "NSUserDefaults+HYBHelperKit.h"

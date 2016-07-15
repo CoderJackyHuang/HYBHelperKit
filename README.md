@@ -100,6 +100,9 @@ kWeakObject(self);
 * V0.1.1
   - Fix bugs
   - Upload pod to support
+* V0.2.0
+  - Add UIKit categories, as UIAlertView, UIActionSheet.
+  - Fix hyb_trimLeft crash bug when not enough length string.
 
 #LICENSE
 

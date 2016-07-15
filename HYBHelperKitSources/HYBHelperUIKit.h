@@ -9,4 +9,6 @@
 #import "UIView+HYBHelperKitUIKit.h"
 #import "UIDevice+HYBHelperKitUIKit.h"
 #import "UIColor+HYBHelperKitUIKit.h"
+#import "UIAlertView+HYBHelperKit.h"
+#import "UIActionSheet+HYBHelperKit.h"
 

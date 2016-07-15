@@ -219,7 +219,7 @@
 }
 
 - (NSString *)hyb_trimLeft {
-  NSUInteger len = 0;
+  NSInteger len = 0;
   
   while (len < self.length) {
     if ([self characterAtIndex:len] != ' ') {
@@ -231,6 +231,10 @@
   
   if (len >= self.length) {
     len = self.length - 1;
+  }
+  
+  if (len <= 0) {
+    return self;
   }
   
   return [self substringFromIndex:len];

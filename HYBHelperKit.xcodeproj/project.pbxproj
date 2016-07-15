@@ -48,6 +48,9 @@
 		69489EC91D23BCDC00F90205 /* NSTimerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69489EC71D23BCDC00F90205 /* NSTimerTests.m */; };
 		69489ECC1D23BEEF00F90205 /* NSUserDefaultsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69489ECA1D23BEEF00F90205 /* NSUserDefaultsTests.m */; };
 		69489ED11D23C11200F90205 /* NSStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69489ED01D23C11200F90205 /* NSStringTests.m */; };
+		695029101D366C2800773B69 /* NSNumber+HYBHelperKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6950290F1D366C2800773B69 /* NSNumber+HYBHelperKit.m */; };
+		6950297C1D3929B800773B69 /* UIAlertView+HYBHelperKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6950297B1D3929B800773B69 /* UIAlertView+HYBHelperKit.m */; };
+		6950297F1D39332B00773B69 /* UIActionSheet+HYBHelperKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6950297E1D39332B00773B69 /* UIActionSheet+HYBHelperKit.m */; };
 		69C383191D23C7FB00176B00 /* NSObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C383181D23C7FB00176B00 /* NSObjectTests.m */; };
 		69C383291D23DA4100176B00 /* ArrayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C383271D23DA4100176B00 /* ArrayTests.m */; };
 		DC82BC5B03DBD5DC59B883D8 /* libPods-HYBHelperKitTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 880E538D3E79C9676BE1490E /* libPods-HYBHelperKitTests.a */; };
@@ -148,6 +151,12 @@
 		69489EC71D23BCDC00F90205 /* NSTimerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSTimerTests.m; sourceTree = "<group>"; };
 		69489ECA1D23BEEF00F90205 /* NSUserDefaultsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSUserDefaultsTests.m; sourceTree = "<group>"; };
 		69489ED01D23C11200F90205 /* NSStringTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringTests.m; sourceTree = "<group>"; };
+		6950290E1D366C2800773B69 /* NSNumber+HYBHelperKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+HYBHelperKit.h"; sourceTree = "<group>"; };
+		6950290F1D366C2800773B69 /* NSNumber+HYBHelperKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+HYBHelperKit.m"; sourceTree = "<group>"; };
+		6950297A1D3929B800773B69 /* UIAlertView+HYBHelperKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIAlertView+HYBHelperKit.h"; path = "HYBHelperKitSources/UIAlertView+HYBHelperKit.h"; sourceTree = SOURCE_ROOT; };
+		6950297B1D3929B800773B69 /* UIAlertView+HYBHelperKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+HYBHelperKit.m"; path = "HYBHelperKitSources/UIAlertView+HYBHelperKit.m"; sourceTree = SOURCE_ROOT; };
+		6950297D1D39332B00773B69 /* UIActionSheet+HYBHelperKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIActionSheet+HYBHelperKit.h"; path = "HYBHelperKitSources/UIActionSheet+HYBHelperKit.h"; sourceTree = SOURCE_ROOT; };
+		6950297E1D39332B00773B69 /* UIActionSheet+HYBHelperKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIActionSheet+HYBHelperKit.m"; path = "HYBHelperKitSources/UIActionSheet+HYBHelperKit.m"; sourceTree = SOURCE_ROOT; };
 		69C383181D23C7FB00176B00 /* NSObjectTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSObjectTests.m; sourceTree = "<group>"; };
 		69C383271D23DA4100176B00 /* ArrayTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayTests.m; sourceTree = "<group>"; };
 		880E538D3E79C9676BE1490E /* libPods-HYBHelperKitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HYBHelperKitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -249,6 +258,8 @@
 				6920F8271D3351DB00D89D07 /* NSUserDefaults+HYBHelperKit.m */,
 				6920F8821D339D3D00D89D07 /* NSDate+HYBHelperKit.h */,
 				6920F8831D339D3D00D89D07 /* NSDate+HYBHelperKit.m */,
+				6950290E1D366C2800773B69 /* NSNumber+HYBHelperKit.h */,
+				6950290F1D366C2800773B69 /* NSNumber+HYBHelperKit.m */,
 			);
 			name = FoudationKit;
 			sourceTree = "<group>";
@@ -287,6 +298,10 @@
 				6920F8791D33526B00D89D07 /* UIDevice+HYBHelperKitUIKit.m */,
 				6920F87A1D33526B00D89D07 /* UIView+HYBHelperKitUIKit.h */,
 				6920F87B1D33526B00D89D07 /* UIView+HYBHelperKitUIKit.m */,
+				6950297A1D3929B800773B69 /* UIAlertView+HYBHelperKit.h */,
+				6950297B1D3929B800773B69 /* UIAlertView+HYBHelperKit.m */,
+				6950297D1D39332B00773B69 /* UIActionSheet+HYBHelperKit.h */,
+				6950297E1D39332B00773B69 /* UIActionSheet+HYBHelperKit.m */,
 			);
 			name = UIKit;
 			path = UIBlocksKit;
@@ -587,6 +602,7 @@
 				6920F8501D3351DB00D89D07 /* NSFileManager+HYBHelperKit.m in Sources */,
 				6920F8531D3351DB00D89D07 /* NSObject+HYBHelperKit.m in Sources */,
 				6920F8631D3351DB00D89D07 /* UITextField+HYBMasonryKit.m in Sources */,
+				695029101D366C2800773B69 /* NSNumber+HYBHelperKit.m in Sources */,
 				6920F87D1D33526B00D89D07 /* UIDevice+HYBHelperKitUIKit.m in Sources */,
 				6920F8841D339D3D00D89D07 /* NSDate+HYBHelperKit.m in Sources */,
 				69489E8B1D23790E00F90205 /* ViewController.m in Sources */,
@@ -602,7 +618,9 @@
 				6920F8731D33522F00D89D07 /* UIGestureRecognizer+HYBHelperBlockKit.m in Sources */,
 				6920F68B1D320E9600D89D07 /* TestViewController1.m in Sources */,
 				6920F84E1D3351DB00D89D07 /* NSArray+HYBHelperKit.m in Sources */,
+				6950297C1D3929B800773B69 /* UIAlertView+HYBHelperKit.m in Sources */,
 				6920F8551D3351DB00D89D07 /* NSTimer+HYBHelperKit.m in Sources */,
+				6950297F1D39332B00773B69 /* UIActionSheet+HYBHelperKit.m in Sources */,
 				6920F8541D3351DB00D89D07 /* NSString+HYBHelperKit.m in Sources */,
 				6920F8521D3351DB00D89D07 /* NSMutableDictionary+HYBHelperKit.m in Sources */,
 				6920F85C1D3351DB00D89D07 /* UIImageView+HYBMasonryKit.m in Sources */,

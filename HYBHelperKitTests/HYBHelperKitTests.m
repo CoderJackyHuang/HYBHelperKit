@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "NSTimer+HYBHelperKit.h"
+#import "NSNumber+HYBHelperKit.h"
 
 @interface HYBHelperKitTests : XCTestCase
 
@@ -34,6 +35,11 @@
     [super tearDown];
   
   [self.timer hyb_invalidate];
+}
+
+- (void)testNumber {
+  NSNumber *v = @(10);
+  XCTAssert([v.hyb_toString isEqualToString:@"10"]);
 }
 
 - (void)testTimerCount {
