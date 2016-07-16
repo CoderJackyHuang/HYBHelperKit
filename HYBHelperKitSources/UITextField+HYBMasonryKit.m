@@ -10,10 +10,12 @@
 #import <objc/runtime.h>
 #import "UIView+HYBHelperKitUIKit.h"
 
+static const void *s_leftMarginOfCursorKey = "s_leftMarginOfCursor";
+
 @implementation UITextField (HYBMasonryKit)
 
 - (CGFloat)hyb_leftMarginOfCursor {
-  NSNumber *number = objc_getAssociatedObject(self, _cmd);
+  NSNumber *number = objc_getAssociatedObject(self, s_leftMarginOfCursorKey);
   
   if ([number respondsToSelector:@selector(floatValue)]) {
     return [number floatValue];
@@ -24,7 +26,7 @@
 
 - (void)setHyb_leftMarginOfCursor:(CGFloat)hyb_leftMarginOfCursor {
   objc_setAssociatedObject(self,
-                           _cmd,
+                           s_leftMarginOfCursorKey,
                            @(hyb_leftMarginOfCursor),
                            OBJC_ASSOCIATION_RETAIN_NONATOMIC);
   
