@@ -12,8 +12,14 @@
 @implementation NSUserDefaults (HYBHelperKit)
 
 - (BOOL)hyb_setSafeObject:(id)value forKey:(NSString *)key {
-  if (value == nil || key == nil || [value isKindOfClass:[NSNull class]]) {
+  if (key == nil) {
     return NO;
+  }
+  
+  if (value == nil || [value isKindOfClass:[NSNull class]]) {
+    [self removeObjectForKey:key];
+    
+    return YES;
   }
   
   if ([value isKindOfClass:[NSString class]] || [value isKindOfClass:[NSNumber class]]) {

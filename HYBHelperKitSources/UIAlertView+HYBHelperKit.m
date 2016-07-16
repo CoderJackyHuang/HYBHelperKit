@@ -46,7 +46,7 @@ static const void *s_privateAlertViewKey = "s_privateAlertViewKey";
                      buttonTitles:(NSArray *)buttonTitles
                             block:(HYBAlertClickedButtonBlock)block {
   NSString *ok = nil;
-  if (!kIsArray(buttonTitles) && buttonTitles.count > 0) {
+  if (kIsArray(buttonTitles) && buttonTitles.count > 0) {
     ok = [buttonTitles hyb_objectAtIndex:0];
   }
   

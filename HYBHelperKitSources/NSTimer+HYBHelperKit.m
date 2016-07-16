@@ -7,8 +7,29 @@
 //
 
 #import "NSTimer+HYBHelperKit.h"
+#import <objc/runtime.h>
+
+static const void *s_hyb_private_currentCountTime = "s_hyb_private_currentCountTime";
 
 @implementation NSTimer (HYBHelperKit)
+
+- (NSNumber *)hyb_private_currentCountTime {
+  NSNumber *obj = objc_getAssociatedObject(self, s_hyb_private_currentCountTime);
+  
+  if (obj == nil) {
+    obj = @(0);
+    
+    [self setHyb_private_currentCountTime:obj];
+  }
+  
+  return obj;
+}
+
+- (void)setHyb_private_currentCountTime:(NSNumber *)time {
+  objc_setAssociatedObject(self,
+                           s_hyb_private_currentCountTime,
+                           time, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
 
 + (NSTimer *)hyb_scheduledTimerWithTimeInterval:(NSTimeInterval)interval
                                           count:(NSInteger)count
@@ -47,11 +68,6 @@
 }
 
 - (void)hyb_invalidate {
-  if ([self.userInfo isKindOfClass:[NSDictionary class]]) {
-    [self.userInfo removeObjectForKey:@"callback"];
-    [self.userInfo removeObjectForKey:@"count"];
-  }
-
   if (self.isValid) {
     [self invalidate];
   }
@@ -67,7 +83,7 @@
 }
 
 + (void)hyb_onTimerUpdateCountBlock:(NSTimer *)timer {
-  static NSUInteger currentCount = 0;
+  NSInteger currentCount = [[timer hyb_private_currentCountTime] integerValue];
   
   NSDictionary *userInfo = timer.userInfo;
   HYBTimerCallback callback = userInfo[@"callback"];
@@ -75,12 +91,15 @@
   
   if (currentCount < count.integerValue) {
     currentCount++;
+    [timer setHyb_private_currentCountTime:@(currentCount)];
     
     if (callback) {
       callback(timer);
     }
   } else {
     currentCount = 0;
+    [timer setHyb_private_currentCountTime:@(currentCount)];
+    
     [timer hyb_unfireTimer];
     [timer hyb_invalidate];
   }
