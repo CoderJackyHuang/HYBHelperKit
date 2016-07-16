@@ -103,6 +103,7 @@ kWeakObject(self);
 * V0.2.0
   - Add UIKit categories, as UIAlertView, UIActionSheet.
   - Fix hyb_trimLeft crash bug when not enough length string.
+  - Fix hyb_leftMarginOfCursor using _cmd will get nil because of getter and setter _cmd is not the same.
 
 #LICENSE
 
