@@ -14,7 +14,7 @@
 * 对常用的控制器类的通用功能集成到基类中，如通知监听及释放、导航条配置、测试入口类、base url列表选择入口等
 * 对常用的控件封装成block版本
 
-#目录划分
+# 目录划分
 
 * CommonKit：将常用的宏和短代码简化成宏或者block定义
 * UIBlockKit：将常用的UI控件变成block版本，以辅助UIMasonryMaker生成最简单的版本
@@ -26,23 +26,23 @@
 
 
 
-#单元测试
+# 单元测试
 
 对于FoundationKit是经过单元测试的！对于UI组件，并没有进行单元测试，不过已在某项目中使用，目前未出现问题。
 
-#使用
+# 使用
 
 ```
 pod 'HYBHelperKit'
 ```
 
-#API风格
+# API风格
 
 * 所有扩展公开API及属性都有hyb_前缀
 * 部分类公开API及属性也有hyb_前缀
 * 所有API都有详细的注释
 
-#基础使用
+# 基础使用
 
 ```
 // 非系统返回按钮
@@ -62,7 +62,7 @@ kWeakObject(self);
 }];
 ```
 
-##创建tableview
+## 创建tableview
 
 提供了多种API，这只是其中一种：
 
@@ -73,7 +73,7 @@ kWeakObject(self);
   }];
 ```
 
-##创建按钮
+## 创建按钮
 
 ```
   UIButton *enterButton = [UIButton hyb_buttonWithTitle:@"立即进入" superView:itemView1 constraints:^(MASConstraintMaker *make) {
@@ -88,11 +88,11 @@ kWeakObject(self);
 
 更多还是查看源代码吧！
 
-#声明
+# 声明
 
 本开源项目会持续维护，如果有bug或者觉得可以抽一个轮子的，请拉一个issue或者pull request过来！如果想到博客中阅读，欢迎访问[http://www.huangyibiao.com/ios-hybhelperkit/](http://www.huangyibiao.com/ios-hybhelperkit/)
 
-#History Versions
+# History Versions
 
 * V0.1.0
   - Fix bugs
@@ -105,7 +105,7 @@ kWeakObject(self);
   - Fix hyb_trimLeft crash bug when not enough length string.
   - Fix hyb_leftMarginOfCursor using _cmd will get nil because of getter and setter _cmd is not the same.
 
-#LICENSE
+# LICENSE
 
 MIT
 
